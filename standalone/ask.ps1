@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   给 claude-bridge 递一个任务并等结果。
 .DESCRIPTION

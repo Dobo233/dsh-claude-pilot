@@ -1,5 +1,5 @@
 # dsh-claude-pilot bundle patch: mounts the host tool row into the DSH composition.
-# Install: dsh plugin --profile web add github:OWNER/dsh-claude-pilot
+# Install: dsh plugin --profile web add github:Dobo233/dsh-claude-pilot
 #   或本地： dsh plugin --profile web add E:\path\to\dsh-claude-pilot
 - insert:
     - id: claude-pilot

@@ -1,6 +1,6 @@
 # dsh-claude-pilot
 
-把本机 **Claude Code CLI** 接成 [DeepSeek Harness](https://github.com/deepseek-ai) 的原生工具。与 [dsh-codex-pilot](https://github.com/OWNER/dsh-codex-pilot) 是一对：同一套 `run / resume / probe` 语义，按你手上有哪个 CLI 选哪个。
+把本机 **Claude Code CLI** 接成 [DeepSeek Harness](https://github.com/deepseek-ai) 的原生工具。与 [dsh-codex-pilot](https://github.com/Dobo233/dsh-codex-pilot) 是一对：同一套 `run / resume / probe` 语义，按你手上有哪个 CLI 选哪个。
 
 | 形态 | 入口 | 需要什么 |
 | --- | --- | --- |
@@ -10,7 +10,7 @@
 ## 安装
 
 ```bash
-dsh plugin --profile web add github:<owner>/dsh-claude-pilot
+dsh plugin --profile web add github:Dobo233/dsh-claude-pilot
 dsh plugin --profile web add E:\path\to\dsh-claude-pilot   # 本地
 ```
 

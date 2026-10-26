@@ -56,7 +56,7 @@ Claude Code 的登录态**不跟桌面端共享**：CLI 自己的凭据只在 `~
 
 ```powershell
 claude            # 交互式一次，进来后 /login（浏览器 OAuth，选同一个账号）
-claude setup-token   # 充："Set up a long-lived authentication token (requires Claude subscription)"
+claude setup-token   # help 原文："Set up a long-lived authentication token (requires Claude subscription)"
 ```
 
 `setup-token` 拿到的是长期 token，放进环境变量即可被本插件继承（`env` 是 `process.env` 直通）：

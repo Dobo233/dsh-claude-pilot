@@ -48,6 +48,23 @@ permissionMode: null      # null = 用 Claude Code 自己的设置；可选 defa
 extraEnv: {}
 ```
 
+### 无头登录（CI / 桥 / 不开终端界面）
+
+Claude Code 的登录态**不跟桌面端共享**：CLI 自己的凭据只在 `~/.claude.json` 的 `claudeAiOauth` 字段或 `~/.claude/.credentials.json` 里，两者都没有时 `-p` 会直接返回 `Not logged in · Please run /login`。
+
+两种补法：
+
+```powershell
+claude            # 交互式一次，进来后 /login（浏览器 OAuth，选同一个账号）
+claude setup-token   # 充："Set up a long-lived authentication token (requires Claude subscription)"
+```
+
+`setup-token` 拿到的是长期 token，放进环境变量即可被本插件继承（`env` 是 `process.env` 直通）：
+
+```powershell
+$env:CLAUDE_CODE_OAUTH_TOKEN = '<token>'          # 当前会话生效
+# 或只给插件：配置里 extraEnv: { CLAUDE_CODE_OAUTH_TOKEN: '<token>' }
+```
 ## 独立桥（不用 DSH）
 
 ```bash
